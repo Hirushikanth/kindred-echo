@@ -1,0 +1,50 @@
+{
+  "name": "kindred-echo",
+  "version": "0.1.0",
+  "description": "Conversational AI that helps families hear preserved memories in a loved one's cloned voice",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "test": "vitest",
+    "test:config": "tsx src/server/config/validate.ts",
+    "smoke:minimax": "tsx src/server/minimax/smoke-test.ts",
+    "test:minimax": "tsx src/server/minimax/client.test.ts",
+    "setup:db": "tsx src/server/config/setupSchema.ts",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "next": "^14.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.3.0",
+    "@supabase/supabase-js": "^2.38.0",
+    "hono": "^4.0.0",
+    "zod": "^3.22.0",
+    "framer-motion": "^10.16.0",
+    "@ffmpeg/ffmpeg": "^0.12.0",
+    "@ffmpeg/util": "^0.12.0",
+    "tailwindcss": "^3.4.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "eslint": "^8.54.0",
+    "eslint-config-next": "^14.1.0",
+    "prettier": "^3.1.0",
+    "vitest": "^1.0.0",
+    "@testing-library/react": "^14.1.0",
+    "@testing-library/jest-dom": "^6.1.0",
+    "tsx": "^4.7.0"
+  },
+  "engines": {
+    "node": ">=18.17.0",
+    "npm": ">=9.0.0"
+  }
+}

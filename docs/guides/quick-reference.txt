@@ -1,0 +1,39 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                   KINDRED ECHO — QUICK REFERENCE                             ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+DOCUMENTATION INDEX (canonical: docs/README.md)
+────────────────────────────────────────────────────────────────────────────
+  README.md ............................ repo overview + npm commands
+  docs/getting-started/onboarding ..... post-scaffold / handoff checklist
+  docs/getting-started/prerequisites .. credentials checklist
+  docs/getting-started/setup-guide ..... 7-step setup
+  docs/guides/configuration-summary ... autonomous config recap
+  docs/spec/main-development-plan .... full tech + product specification
+  docs/integration/minimax-api-reference.md ..... MiniMax endpoints
+  docs/sql/supabase-migrations.sql .... paste into Supabase SQL editor
+
+WHAT YOU NEED
+────────────────────────────────────────────────────────────────────────────
+  ☐ MiniMax API Key (console.minimax.io)
+  ☐ Supabase project URL + publishable/client key + service role key
+  ☐ Optional: ~30–60s sample audio for demos
+
+FAST PATH (~40 MIN)
+────────────────────────────────────────────────────────────────────────────
+  1. Read prerequisites + gather keys
+  2. cp .env.example .env.local   (never commit!)
+  3. Paste docs/sql/supabase-migrations.sql → Supabase SQL editor → Run
+  4. npm install && npm run test:config
+  5. npm run dev  → http://localhost:3000
+
+CORE SERVER CONFIG SOURCE
+────────────────────────────────────────────────────────────────────────────
+  src/server/config/manager.ts
+  src/server/config/validate.ts
+  src/server/config/setupSchema.ts
+
+HELP
+────────────────────────────────────────────────────────────────────────────
+  Setup issues ..... docs/getting-started/setup-guide.md § troubleshooting
+  API drift ........ npm run smoke:minimax (+ docs/integration/*)

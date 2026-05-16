@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+.vercel/
+
+# Environment (never commit secrets; keep shared template tracked)
+.env
+.env.*
+!.env.example
+
+# Build / TypeScript / tests
+dist/
+coverage/
+*.tsbuildinfo
+
+# Turbopack cache (future-proof)
+.turbo/
+
+# OS junk
+.DS_Store
+
+# Logs / debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Editors (optional junk only)
+*.sw?
+*~
