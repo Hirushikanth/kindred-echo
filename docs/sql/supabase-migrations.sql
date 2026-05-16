@@ -193,3 +193,12 @@ begin
       with check (auth.role() = 'service_role');
   end if;
 end $$;
+
+-- Phase 2: room lifecycle (aligns docs/spec/main-development-plan.md Phase 2)
+alter table public.family_rooms
+  add column if not exists status text not null default 'setup';
+
+comment on column public.family_rooms.status is
+  'Planned lifecycle: setup | cloning | ready | error';
+
+create index if not exists idx_family_rooms_status on public.family_rooms (status);

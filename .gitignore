@@ -32,3 +32,14 @@ pnpm-debug.log*
 # Editors (optional junk only)
 *.sw?
 *~
+
+# Playwright — reports/traces/screenshots/videos are heavy; keep repo lean (use Cursor MCP browser when needed).
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+.playwright/
+
+# Cursor / agent browser artifacts (if any MCP runner writes locally)
+**/trace.zip
+
