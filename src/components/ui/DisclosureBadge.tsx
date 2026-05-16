@@ -2,12 +2,12 @@
 export function DisclosureBadge({ className = "" }: { className?: string }) {
   return (
     <div
-      className={`inline-flex items-center gap-2 rounded-full border border-stone-200 bg-white/90 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-600 shadow-sm backdrop-blur-sm ring-1 ring-stone-100 ${className}`}
+      className={`inline-flex items-center gap-2 rounded-full border border-border bg-card/90 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground shadow-sm backdrop-blur-sm ${className}`}
       role="status"
       aria-label="Artificial-intelligence recreation in a private room"
     >
       <svg
-        className="h-3 w-3 text-rose-500"
+        className="h-3 w-3 text-lavender"
         aria-hidden
         fill="none"
         viewBox="0 0 24 24"
